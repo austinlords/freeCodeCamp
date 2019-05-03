@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>JavaScript Documentation</title>
+</head>
+<body>
+  <div class='container'>
+    <nav id="navbar">
+      <header><h1>JavaScript Documentation</h1></header>
+      <ul id="nav-menu">
+        <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+        <li><a href="#What_is_JavaScript?" class="nav-link">What is JavaScript?</a></li>
+        <li><a href="#Getting_started_with_JavaScript" class="nav-link">Getting started with JavaScript</a></li>
+        <li><a href="#Data_structures_and_types" class="nav-link">Data structures and types</a></li>
+        <li><a href="#Loops_and_iteration" class="nav-link">Loops and iteration</a></li>
+        <li><a href="#Reference" class="nav-link">Reference</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id='What_you_should_already_know'>
+        <header><h1>What you should already know</h1></header>
+        <p>
+          This guide assumes you have the following basic background:
+        </p>
+        <ul>
+          <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>Some programming experience.</li>
+        </ul>
+      </section>
+      <section class="main-section" id='What_is_JavaScript?'>
+        <header><h1>What is JavaScript?</h1></header>
+        <p>
+          JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g. having complex animations, clickable buttons, popup menus, etc.).  There are also more advanced server side versions of JavaScript such as Node.Js which allow you to add more functionality to a website than simply downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+        <p>
+            JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
+        </p>
+        <ul>
+          <li>
+            Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
+          </li>
+          <li>
+            Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.
+          </li>
+        </ul>
+        <p>
+          This means that in the browser, JavaScript can change the way the webpage (DOM) looks. And, likewise, Node.js JavaScript on the server can respond to custom requests from code written in the browser.
+        </p>
+      </section>
+      <section class="main-section" id='Getting_started_with_JavaScript'>
+        <header><h1>Getting started with JavaScript</h1></header>
+        <p>
+          Getting started with JavaScript is easy: all you need is a modern Web browser such as Chrome, Firefox, Safari or Edge.
+        </p>
+        <h3>The Web Console</h3>
+        <figure>
+          <figcaption>Picture of the Web Console in Google Chrome</figcaption>
+          <img id='webConsolePic' src="js_console.PNG" alt="">
+        </figure>
+        <p>
+          The Web Console shows you information about the currently loaded Web page, and also includes a command line that you can use to execute JavaScript expressions in the current page.
+        </p>
+        <p>
+          To open the Web Console (Ctrl+Shift+I on Windows and Linux or Cmd-Option-K on Mac), select "Web Console" from the "Developer" menu, which is under the "Tools" menu in Firefox. It appears at the bottom of the browser window. Along the bottom of the console is a command line that you can use to enter JavaScript, and the output appears in the panel above:
+        </p>
+        <p>
+          The console works the exact same way as eval: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actual surrounded by console.log around eval like so.
+        </p>
+        <code>
+          <pre>
+function greetMe(yourName) {
+  alert('Hello ' + yourName);
+}
+console.log(eval('3 + 5'));
+        </pre>
+        </code>
+        <p></p>
+      </section>
+      <section class="main-section" id='Data_structures_and_types'>
+        <header><h1>Data structures and types</h1></header>
+        <p>The latest ECMAScript standard defines seven data types:</p>
+        <ul>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Glossary/Boolean' target='_blank'>Boolean</a>. <em>true</em> and <em>false</em>.</li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Glossary/null' target='_blank'>null</a>. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Glossary/undefined' target='_blank'>undefined</a>. A top-level property whose value is not defined.</li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Glossary/Number' target='_blank'>Number</a>. An integer or floating point number. For example: 42 or 3.14159</li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Glossary/String' target='_blank'>String</a>. A sequence of characters that represent a text value. For example: "Howdy"</li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Glossary/Symbol' target='_blank'>Symbol</a>. A data type whose instances are unique and immutable.
+          </li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Glossary/Object' target='_blank'>Object</a>.</li>
+        </ul>
+        <code></code>
+        <p>
+          Although these data types are relatively few, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.
+        </p>
+        <h3>Data type conversion</h3>
+        <p>
+          JavaScript is a dynamically typed language. That means you don't have to specify the data type of a variable when you declare it, and data types are converted automatically as needed during script execution. So, for example, you could define a variable as follows:
+        </p>
+        <code>
+          var answer = 42;
+        </code>
+        <p>
+          And later, you could assign the same variable a string value, for example:
+        </p>
+        <code>
+          answer = 'Thanks for all the fish...';
+        </code>
+        <p>
+          Because JavaScript is dynamically typed, this assignment does not cause an error message.
+        </p>
+        <p>
+          In expressions involving numeric and string values with the + operator, JavaScript converts numeric values to strings. For example, consider the following statements:
+        </p>
+        <code>
+          x = <span class='string'>'The answer is '</span> + <span class='number'>42</span> <span class='comment'>// "The answer is 42"</span><br>
+          y = <span class='number'>42</span> + <span class='string'>' is the answer'</span> <span class='comment'>// "42 is the answer"</span>
+        </code>
+        <p>
+          In statements involving other operators, JavaScript does not convert numeric values to strings. For example:
+        </p>
+        <code>
+         <span class='string'>'37'</span> - <span class='number'>7</span> <span class='comment'>// 30</span><br>
+         <span class='string'>'37'</span> + <span class='number'>7</span> <span class='comment'>// "377"</span><br>
+        </code>
+      </section>
+      <section class="main-section" id='Loops_and_iteration'>
+        <header><h1>Loops and iteration</h1></header>
+        <p>
+          Loops offer a quick and easy way to do something repeatedly. This chapter of the JavaScript Guide introduces the different iteration statements available to JavaScript.
+        </p>
+        <p>
+          You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction then Y steps in another; for example, the idea "Go five steps to the east" could be expressed this way as a loop:
+        </p>
+        <code>
+          <pre>
+var step;
+for (step = 0; step < 5; step++) {
+  // Runs 5 times, with values of step 0 through 4.
+  console.log('Walking east one step');
+}
+          </pre>
+        </code>
+        <p>
+          The statements for loops provided in JavaScript are:
+        </p>
+        <ul>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement' target='_blank'>for statement</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#do...while_statement' target='_blank'>do...while statement</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#while_statement' target='_blank'>while statement</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#labeled_statement' target='_blank'>labeled statement</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#break_statement' target='_blank'>break statement</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#continue_statement' target='_blank'>continue statement</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...in_statement' target='_blank'>for...in statement</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement' target='_blank'>for...of statement</a></li>
+        </ul>
+        <p></p>
+      </section>
+      <section class="main-section" id='Reference'>
+        <header><h1>Reference</h1></header>
+        <ul>
+          <li>All documentation on this page is taken from the <a href='https://developer.mozilla.org/en-US/' target='_blank'>Mozilla Developer Network (MDN)</a>.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
