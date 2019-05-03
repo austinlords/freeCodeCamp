@@ -1,6 +1,5 @@
-// INTERMEDIATE ALGORITHM SCRIPTING
-
-// Spinal Tap Case
+// SPINAL TAP CASE
+/* Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes. */
 function spinalCase(str) {
   return str
     .trim()

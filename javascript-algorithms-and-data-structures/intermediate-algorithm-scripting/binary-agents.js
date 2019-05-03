@@ -1,6 +1,7 @@
-// INTERMEDIATE ALGORITHM SCRIPTING
+// BINARY AGENTS
+/* Return an English translated sentence of the passed binary string.
 
-// Binary Agents
+The binary string will be space separated. */
 function binaryAgent(str) {
   let arr = str.split(' ');
   arr = arr.map(element => parseInt(element,2).toString(10))

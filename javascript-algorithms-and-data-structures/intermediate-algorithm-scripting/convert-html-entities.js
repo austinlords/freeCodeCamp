@@ -1,6 +1,5 @@
-// INTERMEDIATE ALGORITHM SCRIPTING
-
-// Converting HTML Entities
+// CONVERT HTML ENTITIES
+/* Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities. */
 function convertHTML(str) {
   str = str
     .replace(/&/g,'&amp;')

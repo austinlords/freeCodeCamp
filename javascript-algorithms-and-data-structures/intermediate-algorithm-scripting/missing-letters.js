@@ -1,6 +1,7 @@
-// INTERMEDIATE ALGORITHM SCRIPTING 
+// MISSING LETTERS
+/* Find the missing letter in the passed letter range and return it.
 
-// Missing Letters
+If all letters are present in the range, return undefined. */
 function fearNotLetter(str) {
   let code = str.charCodeAt(0);
   let splitArr = str.split('');
